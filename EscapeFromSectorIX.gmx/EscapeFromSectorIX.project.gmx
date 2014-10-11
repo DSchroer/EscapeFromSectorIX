@@ -14,6 +14,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <shaders name="shaders">
@@ -36,10 +37,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\ltest</room>
+    <room>rooms\room2</room>
     <room>rooms\room0</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41919.7184012153</constant>
+    <constant name="GM_build_date">41923.6680000347</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
