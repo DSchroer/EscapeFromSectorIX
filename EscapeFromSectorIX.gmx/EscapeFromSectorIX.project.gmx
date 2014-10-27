@@ -11,6 +11,14 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_turret_fixed</sprite>
     <sprite>sprites\lazer_flare</sprite>
+    <sprite>sprites\spr_exit</sprite>
+    <sprite>sprites\spr_crate</sprite>
+    <sprite>sprites\spr_blood</sprite>
+    <sprites name="Buttons">
+      <sprite>sprites\btn_play</sprite>
+      <sprite>sprites\btn_quit</sprite>
+      <sprite>sprites\btn_load</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -18,14 +26,20 @@
     <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\create_ui.gml</script>
+    <script>scripts\push_crate.gml</script>
+  </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\glow.shader</shader>
   </shaders>
+  <fonts name="fonts">
+    <font>fonts\font_main</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\boxo</object>
-    <object>objects\FPS</object>
+    <object>objects\wall</object>
     <object>objects\player</object>
-    <objects name="enemies">
+    <objects name="Enemies">
       <objects name="spinner">
         <object>objects\turret</object>
       </objects>
@@ -35,15 +49,53 @@
       </objects>
       <object>objects\turret_fixed</object>
     </objects>
+    <objects name="Containers">
+      <object>objects\local_container</object>
+    </objects>
+    <objects name="Progression">
+      <object>objects\door</object>
+    </objects>
+    <objects name="GUI">
+      <object>objects\death_counter</object>
+      <object>objects\frame_viewer</object>
+    </objects>
+    <objects name="Clones">
+      <object>objects\random_person</object>
+    </objects>
+    <object>objects\crate</object>
+    <objects name="Display">
+      <object>objects\text_overlay</object>
+    </objects>
+    <object>objects\blood</object>
+    <objects name="Buttons">
+      <object>objects\play</object>
+      <object>objects\quit</object>
+      <object>objects\load</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Level1</room>
-    <room>rooms\room3</room>
-    <room>rooms\ltest</room>
-    <room>rooms\room0</room>
+    <room>rooms\MainMenu</room>
+    <rooms name="BaseTutorials">
+      <room>rooms\movement_tutorial</room>
+    </rooms>
+    <rooms name="LaserLevels">
+      <room>rooms\laser_tutorial</room>
+      <room>rooms\holding_cell</room>
+      <room>rooms\tight_turns</room>
+      <room>rooms\laser_hall</room>
+      <room>rooms\spinner_vent</room>
+    </rooms>
+    <rooms name="BoxLevels">
+      <room>rooms\box_tutorial</room>
+      <room>rooms\box_block</room>
+      <room>rooms\slide_box</room>
+    </rooms>
+    <rooms name="TestLevels">
+      <room>rooms\end_level</room>
+    </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41925.0541076852</constant>
+    <constant name="GM_build_date">41939.8569918981</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

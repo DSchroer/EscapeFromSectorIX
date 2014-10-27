@@ -81,18 +81,23 @@ ids = 0
 length = 0
 while(!ids &amp;&amp; length &lt; max_length)
 {
-    b = instance_nearest(ex,ey,boxo)
+    b = instance_nearest(ex,ey,wall)
     dist = distance_to_point(b.x,b.y) - distance_to_point(ex,ey)
    
     if(dist &lt; 50 &amp;&amp; dist &gt; 0)
         length += 5
     else
-        length += 32
+        length += 16
     
     ex = x + (sin(direction) * length)
     ey = y + (cos(direction) * length)
     
-    ids = collision_point(ex,ey,boxo,true,true)
+    ids = collision_point(ex,ey,wall,true,true)
+    t = collision_point(ex,ey,random_person,true,true)
+    if(t)
+    {
+        t.dead = true
+    }
     
     if(collision_point(ex,ey,player,true,true))
     {

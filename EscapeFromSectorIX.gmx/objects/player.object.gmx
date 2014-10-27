@@ -33,9 +33,36 @@ mv_speed = 7
 
 nx_x = x
 nx_y = y
+nx_x_p = x
+nx_y_p = y
 
 
 dead = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Make local variable holder
+
+instance_create(0,0,local_container)
+
+create_ui()
 </string>
           </argument>
         </arguments>
@@ -63,6 +90,7 @@ dead = false
 move = false
 if(nx_x == x &amp;&amp; nx_y == y)
 {
+    
     if(keyboard_check(vk_up))
     {
         nx_y -= 32
@@ -82,9 +110,50 @@ if(nx_x == x &amp;&amp; nx_y == y)
     {
         nx_x += 32
     }
-        
+            
     move = true
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///check box
+
+xhit = false
+yhit = false
+if(move)
+{
+    t = collision_point(nx_x,nx_y,crate,true,true)
+    if(t)
+    {
+        xp = nx_x - x
+        yp = nx_y - y
+        with(t)
+        {
+            push_crate(other.xp,other.yp)
+        }
+    }
+}
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -111,15 +180,16 @@ xhit = false
 yhit = false
 if(move)
 {
-    if(collision_line(x,y,nx_x,nx_y,boxo,true,true))
+
+    if(collision_line(x,y,nx_x,nx_y,wall,true,true))
     {
-        if(collision_point(nx_x,y,boxo,true,true))
+        if(collision_point(nx_x,y,wall,true,true))
         {
             nx_x = x
             xhit = true
         }
         
-        if(collision_point(x,nx_y,boxo,true,true))
+        if(collision_point(x,nx_y,wall,true,true))
         {
             nx_y = y
             yhit = true
@@ -127,11 +197,30 @@ if(move)
         
         if(!yhit &amp;&amp; !xhit)
         {
+            ch = false
+            if(nx_x_p == x)
+            {
+               nx_y = y
+               ch = true
+            }
             
+            if(nx_y_p == y)
+            {
+                nx_x = x
+                ch = true
+            }
             
-        }
+            if(!ch)
+            {
+                nx_x = x
+                nx_y = y
+            }
+        } 
+        
         
     }
+     nx_x_p = x
+     nx_y_p = y
 }
 
 
@@ -218,6 +307,87 @@ if(x != xprevious || y != yprevious)
 
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Test death
+if(dead)
+{   
+//reset boxes
+    with(crate)
+    {
+        x = xstart;
+        y = ystart;
+    }
+    
+    instance_create(x,y,blood)
+
+    local_container.deaths++;
+    x = xstart;
+    y = ystart;
+    nx_x = xstart;
+    nx_y = ystart;
+    dead = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>333</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_save_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>2</kind>
+            <string>savegame</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>MainMenu</room>
           </argument>
         </arguments>
       </action>
