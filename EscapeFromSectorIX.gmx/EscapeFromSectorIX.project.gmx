@@ -19,10 +19,12 @@
       <sprite>sprites\btn_quit</sprite>
       <sprite>sprites\btn_load</sprite>
     </sprites>
+    <sprite>sprites\spr_laser_box</sprite>
+    <sprite>sprites\spr_gore</sprite>
+    <sprite>sprites\spr_glass</sprite>
+    <sprite>sprites\spr_glass_move</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
-    <background>background\background1</background>
     <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
@@ -72,6 +74,10 @@
       <object>objects\quit</object>
       <object>objects\load</object>
     </objects>
+    <object>objects\obj_gore</object>
+    <object>objects\glass</object>
+    <object>objects\push_glass</object>
+    <object>objects\game_level</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
@@ -90,12 +96,15 @@
       <room>rooms\box_block</room>
       <room>rooms\slide_box</room>
     </rooms>
+    <rooms name="GlassLevels">
+      <room>rooms\spinner_glass</room>
+    </rooms>
     <rooms name="TestLevels">
       <room>rooms\end_level</room>
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41939.8569918981</constant>
+    <constant name="GM_build_date">41948.7758592593</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

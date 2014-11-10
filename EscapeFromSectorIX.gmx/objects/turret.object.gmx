@@ -56,7 +56,7 @@ l[3].direction = (3/2) * pi
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sp = 0.04
+            <string>sp = 0.03
 
 l[0].direction += sp
 l[1].direction += sp
