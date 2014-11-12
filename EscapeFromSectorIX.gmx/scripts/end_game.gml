@@ -15,7 +15,7 @@ p.y1  = y + 50;
 p.x2  = x + 280;
 p.y2  = y + 200;
 
-t = instance_create(x,y,EndPlayer);
+t = instance_create(x,y,end_player);
 t.image_angle = angle
 t.direction = angle + 90
 t.speed = 3

@@ -6,25 +6,35 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\box</sprite>
-    <sprite>sprites\spr_turret</sprite>
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_turret_fixed</sprite>
-    <sprite>sprites\lazer_flare</sprite>
-    <sprite>sprites\spr_exit</sprite>
-    <sprite>sprites\spr_crate</sprite>
-    <sprite>sprites\spr_blood</sprite>
     <sprites name="Buttons">
       <sprite>sprites\btn_play</sprite>
       <sprite>sprites\btn_quit</sprite>
       <sprite>sprites\btn_load</sprite>
     </sprites>
-    <sprite>sprites\spr_laser_box</sprite>
-    <sprite>sprites\spr_gore</sprite>
-    <sprite>sprites\spr_glass</sprite>
-    <sprite>sprites\spr_glass_move</sprite>
-    <sprite>sprites\FOV_Shadow</sprite>
-    <sprite>sprites\end_room</sprite>
+    <sprites name="Cinematic">
+      <sprite>sprites\end_room</sprite>
+      <sprite>sprites\FOV_Shadow</sprite>
+    </sprites>
+    <sprites name="Movable">
+      <sprite>sprites\spr_glass_move</sprite>
+      <sprite>sprites\spr_crate</sprite>
+    </sprites>
+    <sprites name="Gore">
+      <sprite>sprites\spr_gore</sprite>
+      <sprite>sprites\spr_blood</sprite>
+    </sprites>
+    <sprites name="Concrete">
+      <sprite>sprites\spr_glass</sprite>
+      <sprite>sprites\spr_laser_box</sprite>
+      <sprite>sprites\spr_exit</sprite>
+      <sprite>sprites\box</sprite>
+    </sprites>
+    <sprites name="Deadly">
+      <sprite>sprites\spr_turret_fixed</sprite>
+      <sprite>sprites\lazer_flare</sprite>
+      <sprite>sprites\spr_turret</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
@@ -35,9 +45,7 @@
     <script>scripts\push_crate.gml</script>
     <script>scripts\end_game.gml</script>
   </scripts>
-  <shaders name="shaders">
-    <shader type="GLSLES">shaders\glow.shader</shader>
-  </shaders>
+  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\font_main</font>
     <font>fonts\TitleFont</font>
@@ -69,7 +77,7 @@
     </objects>
     <objects name="Clones">
       <object>objects\random_person</object>
-      <object>objects\EndPlayer</object>
+      <object>objects\end_player</object>
     </objects>
     <object>objects\crate</object>
     <objects name="Display">
@@ -91,9 +99,14 @@
     <object>objects\textPrompt</object>
     <object>objects\shadow</object>
     <object>objects\outside</object>
+    <objects name="Control">
+      <object>objects\level_select</object>
+      <object>objects\level_jump</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
+    <room>rooms\LevelSelect</room>
     <rooms name="BaseTutorials">
       <room>rooms\movement_tutorial</room>
     </rooms>
@@ -116,7 +129,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41955.933030081</constant>
+    <constant name="GM_build_date">41955.9807049306</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
