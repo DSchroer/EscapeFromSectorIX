@@ -344,6 +344,9 @@
     <tile bgName="background2" x="560" y="528" w="32" h="32" xo="137" yo="35" id="10001788" name="inst_00F93EB2" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background2" x="496" y="528" w="32" h="32" xo="103" yo="35" id="10001789" name="inst_33AA53D6" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background2" x="496" y="464" w="32" h="32" xo="103" yo="1" id="10001790" name="inst_94F8BD07" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background2" x="432" y="560" w="32" h="32" xo="103" yo="69" id="10003939" name="inst_B74CEDF4" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background2" x="464" y="560" w="32" h="32" xo="137" yo="35" id="10003949" name="inst_A675FC08" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background2" x="464" y="560" w="32" h="32" xo="35" yo="69" id="10003950" name="inst_8911D2FF" depth="-1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
