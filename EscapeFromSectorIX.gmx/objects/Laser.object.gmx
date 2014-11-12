@@ -116,22 +116,38 @@ if(p)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>col = make_colour_rgb(204,0,0)
-cols = make_colour_rgb(100,0,0)
+            <string>col = make_colour_rgb(255,0,0)
+//cols = make_colour_rgb(100,0,0)
 
-//draw_set_blend_mode(bm_add);
+//draw_set_alpha(0.4);
+//draw_line_width_colour(x,y,ex,ey,9,col,col)
+
+//draw_set_alpha(1);
+
+
+
+//draw_sprite_ext(lazer_flare,0,ex,ey,0.8,0.8,direction + 90,cols,1)
+
+elliot = 4;
+scale = random_range(5,15);
+
+draw_set_alpha(0.2);
+//draw_line_width_colour(x, y, ex, ey, scale, c_black, c_black);
+//draw_circle_colour(ex,ey,scale,c_black,c_black,false);
+draw_set_blend_mode(bm_normal);
+
+draw_set_alpha(0.2);
+for(i=elliot; i&gt;0;i--){
+    draw_line_width_colour(x, y, ex, ey, scale*(i/elliot), col, col);
+    draw_circle_colour(ex,ey,scale*(i/elliot),col,col,false);
+}
 draw_set_alpha(0.4);
-draw_line_width_colour(x,y,ex,ey,9,col,col)
 
+draw_line_width_colour(x, y, ex, ey, scale/10, c_white, c_white);
+draw_circle_colour(ex,ey,scale/3,c_white,c_white,false);
+
+draw_set_blend_mode(bm_normal);
 draw_set_alpha(1);
-draw_line_width_colour(x,y,ex,ey,4,cols,cols)
-
-
-draw_sprite_ext(lazer_flare,0,ex,ey,0.8,0.8,direction + 90,cols,1)
-
-//draw_set_blend_mode(bm_normal);
-
-
 </string>
           </argument>
         </arguments>

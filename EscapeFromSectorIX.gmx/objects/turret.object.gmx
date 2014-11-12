@@ -62,6 +62,8 @@ l[0].direction += sp
 l[1].direction += sp
 l[2].direction += sp
 l[3].direction += sp
+
+image_angle += radtodeg(sp)
 </string>
           </argument>
         </arguments>
