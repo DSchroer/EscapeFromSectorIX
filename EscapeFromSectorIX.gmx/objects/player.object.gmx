@@ -340,6 +340,8 @@ if(dead)
     {
         x = xstart;
         y = ystart;
+        d_x = x;
+        d_y = y;
     }
     
     instance_create(x,y,blood)

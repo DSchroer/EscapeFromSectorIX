@@ -33,6 +33,7 @@
   <scripts name="scripts">
     <script>scripts\create_ui.gml</script>
     <script>scripts\push_crate.gml</script>
+    <script>scripts\end_game.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\glow.shader</shader>
@@ -68,6 +69,7 @@
     </objects>
     <objects name="Clones">
       <object>objects\random_person</object>
+      <object>objects\EndPlayer</object>
     </objects>
     <object>objects\crate</object>
     <objects name="Display">
@@ -91,14 +93,12 @@
     <object>objects\outside</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Escape_Scene</room>
     <room>rooms\MainMenu</room>
     <rooms name="BaseTutorials">
       <room>rooms\movement_tutorial</room>
     </rooms>
     <rooms name="LaserLevels">
       <room>rooms\laser_tutorial</room>
-      <room>rooms\holding_cell</room>
       <room>rooms\tight_turns</room>
       <room>rooms\laser_hall</room>
       <room>rooms\spinner_vent</room>
@@ -112,11 +112,11 @@
       <room>rooms\spinner_glass</room>
     </rooms>
     <rooms name="TestLevels">
-      <room>rooms\end_level</room>
+      <room>rooms\Escape_Scene</room>
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41955.0800668056</constant>
+    <constant name="GM_build_date">41955.8522755903</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

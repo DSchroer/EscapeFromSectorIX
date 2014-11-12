@@ -31,7 +31,15 @@ cur_text = ""
 skip = true;
 alms = 1;
 
+x1 = room_width * 0.10
+y1 = room_height * 0.50
+
+x2 = room_width * 0.90
+y2 = room_height * 0.75
+
 alarm[0] = alms;
+
+
 </string>
           </argument>
         </arguments>
@@ -83,11 +91,7 @@ alarm[0] = alms;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x1 = room_width * 0.10
-y1 = room_height * 0.50
-
-x2 = room_width * 0.90
-y2 = room_height * 0.75
+            <string>
 
 draw_set_colour(make_colour_rgb(255,136,0));
 draw_rectangle(x1,y1,x2,y2,false);

@@ -1,6 +1,6 @@
 BETA:
-end game sequence
-smooth box movement
+end game sequence [DONE]
+smooth box movement [DONE]
 slow down lasers [DONE]
 better voice prompts [DONE]
 fix menu screen [DONE]

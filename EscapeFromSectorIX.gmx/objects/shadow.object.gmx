@@ -2,12 +2,38 @@
 <object>
   <spriteName>FOV_Shadow</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_xscale = 30
+image_yscale = 30
+
+border = 300
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,11 +51,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = player.x
-y = player.y
+            <string>if(instance_exists(player))
+{
+    x = player.x
+    y = player.y
+    
+    if(x &lt; border)
+        end_game()
+            
+     if(y &lt; border)
+        end_game()
+            
+     if(x &gt; room_width-border)
+        end_game()
+            
+     if(y &gt; room_height-border)
+        end_game()
+}
 
-image_xscale = 30
-image_yscale = 30
+
 </string>
           </argument>
         </arguments>

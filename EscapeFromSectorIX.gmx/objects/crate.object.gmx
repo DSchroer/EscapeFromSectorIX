@@ -8,7 +8,7 @@
   <parentName>wall</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -26,10 +26,91 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
-mv_speed = 7
+mv_speed = 5
 
 nx_x = x
 nx_y = y
+
+d_x = nx_x
+d_y = nx_y
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(x &gt; d_x)
+{
+    if(d_x + mv_speed &lt;= x)
+    {
+        d_x += mv_speed
+    }else{
+        d_x += x - d_x
+    }
+}else{
+    if(d_x - mv_speed &gt;= x)
+    {
+        d_x -= mv_speed
+    }else{
+        d_x += x - d_x
+    }
+}
+
+if(y &gt; d_y)
+{
+    if(d_y + mv_speed &lt;= y)
+    {
+        d_y += mv_speed
+    }else{
+        d_y += y - d_y
+    }
+}else{
+    if(d_y - mv_speed &gt;= y)
+    {
+        d_y -= mv_speed
+    }else{
+        d_y += y - d_y
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite(sprite_index,0,d_x,d_y);
 </string>
           </argument>
         </arguments>

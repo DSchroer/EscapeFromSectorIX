@@ -117,12 +117,19 @@ if(p)
           <argument>
             <kind>1</kind>
             <string>col = make_colour_rgb(204,0,0)
+cols = make_colour_rgb(100,0,0)
 
-
+//draw_set_blend_mode(bm_add);
+draw_set_alpha(0.4);
 draw_line_width_colour(x,y,ex,ey,9,col,col)
-draw_sprite_ext(lazer_flare,0,ex,ey,1,1,direction + 90,col,255)
+
+draw_set_alpha(1);
+draw_line_width_colour(x,y,ex,ey,4,cols,cols)
 
 
+draw_sprite_ext(lazer_flare,0,ex,ey,0.8,0.8,direction + 90,cols,1)
+
+//draw_set_blend_mode(bm_normal);
 
 
 </string>
