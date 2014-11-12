@@ -96,7 +96,6 @@ if(instance_exists(textPrompt))
 move = false
 if(nx_x == x &amp;&amp; nx_y == y)
 {
-    
     if(keyboard_check(vk_up) || keyboard_check(ord("W")))
     {
         nx_y -= 32
