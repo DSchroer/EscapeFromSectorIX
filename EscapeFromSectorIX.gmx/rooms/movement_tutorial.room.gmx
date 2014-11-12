@@ -51,7 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="text_overlay" x="32" y="512" name="inst_72DB6A07" locked="0" code="text = &quot;Move using the #arrow keys.&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="wall" x="384" y="640" name="inst_3D967A63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="player" x="416" y="608" name="inst_8ED954BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="384" y="608" name="inst_8B737E9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="416" y="640" name="inst_9F54349C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -73,7 +73,7 @@
     <instance objName="wall" x="320" y="448" name="inst_68678A00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="352" y="448" name="inst_B332D559" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="384" y="352" name="inst_677931A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_overlay" x="640" y="128" name="inst_02C4DF2A" locked="0" code="text = &quot;Reach the green exit#point to progress&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="textPrompt" x="192" y="160" name="inst_873971CA" locked="0" code="skip = true&#xA;text = &quot;Hello! Thank you for joining me today.#&quot;&#xA;+&quot;I have been trapped in this facility and need your help.#&quot;&#xA;+&quot;Guide me to the nearest elevator so that we can escape together.##&quot;&#xA;+&quot;Move me with either the WASD keys or the arrow keys.#&quot;&#xA;+&quot;#If I get on your nerves please press any key to ignore me...&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="448" y="352" name="inst_E907AA52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="416" y="352" name="inst_68CDCBF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="288" y="448" name="inst_B5564BF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -112,7 +112,6 @@
     <instance objName="wall" x="288" y="256" name="inst_DB73530E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="352" y="352" name="inst_8562AB9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="448" y="640" name="inst_906669E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="wall" x="384" y="640" name="inst_3D967A63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background2" x="320" y="96" w="32" h="32" xo="35" yo="35" id="10001793" name="inst_8B78B20A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

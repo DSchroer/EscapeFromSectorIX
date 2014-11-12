@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>player</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -200,7 +200,13 @@
 
 if(dead)
 {
-    instance_destroy()
+    instance_create(x,y,blood)
+
+    x = xstart;
+    y = ystart;
+    dead = false;
+   
+   
 }
 </string>
           </argument>

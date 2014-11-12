@@ -1,3 +1,4 @@
 ///create_ui()
 
-//instance_create(0,room_height - 100,death_counter)
+if(!instance_exists(game_level))
+    instance_create(0,0,game_level)

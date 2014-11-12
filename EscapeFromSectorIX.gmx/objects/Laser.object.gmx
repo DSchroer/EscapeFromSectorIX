@@ -87,9 +87,10 @@ ey = y
 x = lx
 y = ly
 
-if(collision_line(x,y,ex,ey,player,true,true))
+p = collision_line(x,y,ex,ey,player,true,true)
+if(p)
 {
-    player.dead = true
+    p.dead = true
 }
 
 

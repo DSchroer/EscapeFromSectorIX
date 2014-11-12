@@ -23,6 +23,8 @@
     <sprite>sprites\spr_gore</sprite>
     <sprite>sprites\spr_glass</sprite>
     <sprite>sprites\spr_glass_move</sprite>
+    <sprite>sprites\FOV_Shadow</sprite>
+    <sprite>sprites\end_room</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
@@ -37,6 +39,9 @@
   </shaders>
   <fonts name="fonts">
     <font>fonts\font_main</font>
+    <font>fonts\TitleFont</font>
+    <font>fonts\ButtonFont</font>
+    <font>fonts\PromptFont</font>
   </fonts>
   <objects name="objects">
     <object>objects\wall</object>
@@ -67,19 +72,26 @@
     <object>objects\crate</object>
     <objects name="Display">
       <object>objects\text_overlay</object>
+      <object>objects\title_text</object>
     </objects>
     <object>objects\blood</object>
     <objects name="Buttons">
       <object>objects\play</object>
       <object>objects\quit</object>
       <object>objects\load</object>
+      <object>objects\credits</object>
+      <object>objects\button_box</object>
     </objects>
     <object>objects\obj_gore</object>
     <object>objects\glass</object>
     <object>objects\push_glass</object>
     <object>objects\game_level</object>
+    <object>objects\textPrompt</object>
+    <object>objects\shadow</object>
+    <object>objects\outside</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Escape_Scene</room>
     <room>rooms\MainMenu</room>
     <rooms name="BaseTutorials">
       <room>rooms\movement_tutorial</room>
@@ -104,7 +116,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41948.7758592593</constant>
+    <constant name="GM_build_date">41955.0800668056</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
