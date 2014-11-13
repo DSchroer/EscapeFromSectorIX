@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_playerEyesGlow</sprite>
     <sprites name="Buttons">
       <sprite>sprites\btn_play</sprite>
       <sprite>sprites\btn_quit</sprite>
@@ -104,6 +105,7 @@
       <object>objects\level_select</object>
       <object>objects\level_jump</object>
     </objects>
+    <object>objects\player_spawn</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>

@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>///variables
 
+instance_create(x,y,player_spawn)
+
 mv_speed = 5
 
 nx_x = x
@@ -397,6 +399,9 @@ if(dead)
           <argument>
             <kind>1</kind>
             <string>draw_self()
+draw_set_blend_mode(bm_add)
+draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,image_angle,c_white,random_range(0.2,0.2))
+draw_set_blend_mode(bm_normal)
 
 if(dead)
     draw_text(x-16,y+20,"dead")
