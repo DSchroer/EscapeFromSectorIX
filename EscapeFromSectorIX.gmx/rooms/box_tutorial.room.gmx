@@ -79,7 +79,7 @@
     <instance objName="wall" x="448" y="352" name="inst_30C2AC1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="608" y="256" name="inst_0AF9B4C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="turret_fixed" x="512" y="160" name="inst_53CEFB45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="turret_fixed" x="480" y="160" name="inst_128989AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="textPrompt" x="224" y="480" name="inst_93C2F602" locked="0" code="text = &quot;Boxes may contain valuable loot. Unfortunately I cant open them.##Maybe I can push them around.##What do you think?&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="576" y="352" name="inst_04662F78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door" x="640" y="448" name="inst_DA381142" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="480" y="416" name="inst_E619FBDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -118,7 +118,6 @@
     <instance objName="wall" x="704" y="416" name="inst_65BB2E9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="704" y="416" name="inst_EFDB9387" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="704" y="448" name="inst_205D3975" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_overlay" x="224" y="512" name="inst_B3720395" locked="0" code="text = &quot;Boxes may contain valuable loot.#Unfortunately I cant open them.#Maybe I can push them around?&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background2" x="224" y="256" w="32" h="32" xo="35" yo="35" id="10002416" name="inst_8042CF85" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

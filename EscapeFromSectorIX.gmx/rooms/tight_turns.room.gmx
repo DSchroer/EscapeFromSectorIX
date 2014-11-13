@@ -138,8 +138,6 @@
     <instance objName="wall" x="736" y="480" name="inst_BB98B3AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="768" y="480" name="inst_9B03F47D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door" x="928" y="544" name="inst_59F8B616" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_overlay" x="608" y="160" name="inst_01AC1964" locked="0" code="text = &quot;This place has been#my home for such a#long time.&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_overlay" x="160" y="288" name="inst_160D0056" locked="0" code="text = &quot;The experiments#are over now.#I must leave.##If I can.&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="192" y="192" name="inst_DBACB7BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
