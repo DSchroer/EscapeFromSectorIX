@@ -108,6 +108,7 @@
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
     <room>rooms\LevelSelect</room>
+    <room>rooms\CreditRoom</room>
     <rooms name="BaseTutorials">
       <room>rooms\movement_tutorial</room>
     </rooms>
@@ -130,7 +131,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41956.0240012153</constant>
+    <constant name="GM_build_date">41956.0350268519</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
