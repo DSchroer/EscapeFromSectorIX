@@ -29,6 +29,7 @@
       <sprite>sprites\spr_laser_box</sprite>
       <sprite>sprites\spr_exit</sprite>
       <sprite>sprites\box</sprite>
+      <sprite>sprites\spr_select</sprite>
     </sprites>
     <sprites name="Deadly">
       <sprite>sprites\spr_turret_fixed</sprite>
@@ -86,6 +87,7 @@
     <object>objects\blood</object>
     <objects name="Buttons">
       <object>objects\play</object>
+      <object>objects\menu</object>
       <object>objects\quit</object>
       <object>objects\load</object>
       <object>objects\credits</object>
@@ -106,6 +108,7 @@
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
     <room>rooms\LevelSelect</room>
+    <room>rooms\CreditRoom</room>
     <rooms name="BaseTutorials">
       <room>rooms\movement_tutorial</room>
     </rooms>
@@ -128,8 +131,8 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41956.0602221296</constant>
-    <constant name="GM_version">'100'</constant>
+    <constant name="GM_build_date">41956.0657526852</constant>
+    <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
