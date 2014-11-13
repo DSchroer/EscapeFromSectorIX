@@ -58,12 +58,14 @@ l[3].direction = (3/2) * pi
             <kind>1</kind>
             <string>sp = 0.03
 
-l[0].direction += sp
-l[1].direction += sp
-l[2].direction += sp
-l[3].direction += sp
+direction += sp;
 
-image_angle += radtodeg(sp)
+l[0].direction = direction + (pi/2);
+l[1].direction = direction + pi;
+l[2].direction = direction + (3 * pi/2);
+l[3].direction = direction;
+
+image_angle = radtodeg(direction);
 </string>
           </argument>
         </arguments>
