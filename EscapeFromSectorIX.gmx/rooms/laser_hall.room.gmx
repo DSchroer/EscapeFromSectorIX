@@ -125,7 +125,6 @@
     <instance objName="wall" x="64" y="320" name="inst_F8EB4731" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="64" y="352" name="inst_034B0B7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="320" name="inst_7AF20984" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_overlay" x="112" y="448" name="inst_881D4DF9" locked="0" code="text = &quot;I learned to run a long time ago.#Run as far and as fast as I can.##I learned to survive.&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background2" x="160" y="224" w="32" h="32" xo="35" yo="35" id="10001122" name="inst_2ADE547E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

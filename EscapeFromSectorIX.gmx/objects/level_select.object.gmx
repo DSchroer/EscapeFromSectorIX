@@ -31,7 +31,7 @@ if(instance_exists(game_level))
     level = game_level.level;
     
 xp = 75;
-yp = 100;
+yp = 200;
 
 for(i = movement_tutorial - 1; i &lt; level; i++)
 {
