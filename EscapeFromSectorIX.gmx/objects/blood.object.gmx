@@ -26,9 +26,86 @@
           <argument>
             <kind>1</kind>
             <string>splat = 5;
+image_xscale = random_range(0.6,1.4);
+image_yscale = image_xscale;
+image_angle = random_range(0,360);
+px = x;
+py = y;
+partSystemBlood = part_system_create();
+part_system_position(partSystemBlood,px,py);
+part_system_depth(partSystemBlood,-1000);
+partEmitBlood = part_emitter_create(partSystemBlood);
+
+partTypeBlood = part_type_create();
+part_type_colour_mix(partTypeBlood,c_red,c_maroon);
+part_type_life(partTypeBlood,5,20);
+part_type_shape(partTypeBlood,pt_shape_smoke);
+part_type_scale(partTypeBlood,0.3,0.3);
+part_type_direction(partTypeBlood,0,360,-1,0);
+part_type_speed(partTypeBlood,0.1,0.5,0.05,0);
+
+partTypeBlood2 = part_type_create();
+part_type_alpha2(partTypeBlood2,1,0.1);
+part_type_colour_mix(partTypeBlood2,c_maroon,merge_colour(c_black, c_maroon, 0.5));
+part_type_life(partTypeBlood2,5,20);
+part_type_shape(partTypeBlood2,pt_shape_cloud);
+part_type_scale(partTypeBlood2,0.4,0.4);
+part_type_direction(partTypeBlood2,0,360,-1,0);
+part_type_speed(partTypeBlood2,0.1,0.5,0,0);
+
+part_type_death(partTypeBlood,1,partTypeBlood2);
+
+part_emitter_burst(partSystemBlood,partEmitBlood,partTypeBlood,10);
+part_emitter_region(partSystemBlood,partEmitBlood,x,x,y,y,ps_shape_rectangle,ps_distr_linear);
+//part_emitter_destroy_all(partSystemBlood);
+//part_system_destroy(partSystemBlood);
+//part_emitter_destroy(partSystemBlood,partEmitBlood);
+//part_type_destroy(partTypeBlood);
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>splat</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>10</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -265,6 +342,20 @@
             <string>30</string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="3" enumb="0">
