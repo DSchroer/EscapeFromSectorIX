@@ -29,7 +29,6 @@
       <sprite>sprites\spr_laser_box</sprite>
       <sprite>sprites\spr_exit</sprite>
       <sprite>sprites\box</sprite>
-      <sprite>sprites\spr_select</sprite>
     </sprites>
     <sprites name="Deadly">
       <sprite>sprites\spr_turret_fixed</sprite>
@@ -129,7 +128,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41956.0655030093</constant>
+    <constant name="GM_build_date">41956.0602221296</constant>
     <constant name="GM_version">'100'</constant>
   </constants>
   <help>
