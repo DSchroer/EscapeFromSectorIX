@@ -57,10 +57,6 @@ part_type_death(partTypeBlood,1,partTypeBlood2);
 
 part_emitter_burst(partSystemBlood,partEmitBlood,partTypeBlood,10);
 part_emitter_region(partSystemBlood,partEmitBlood,x,x,y,y,ps_shape_rectangle,ps_distr_linear);
-//part_emitter_destroy_all(partSystemBlood);
-//part_system_destroy(partSystemBlood);
-//part_emitter_destroy(partSystemBlood,partEmitBlood);
-//part_type_destroy(partTypeBlood);
 </string>
           </argument>
         </arguments>

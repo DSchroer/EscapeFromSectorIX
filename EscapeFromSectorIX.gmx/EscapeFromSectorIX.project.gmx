@@ -106,6 +106,7 @@
       <object>objects\level_jump</object>
     </objects>
     <object>objects\player_spawn</object>
+    <object>objects\player_leave</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
@@ -133,8 +134,8 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41956.8300715278</constant>
-    <constant name="GM_version">'1.0.0.0'</constant>
+    <constant name="GM_build_date">41957.2780003819</constant>
+    <constant name="GM_version">'100'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
