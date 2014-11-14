@@ -4,7 +4,7 @@ smooth box movement [DONE]
 slow down lasers [DONE]
 better voice prompts [DONE]
 fix menu screen [DONE]
-add level select
+add level select [DONE]
 
 GOLD:
 finish shadows

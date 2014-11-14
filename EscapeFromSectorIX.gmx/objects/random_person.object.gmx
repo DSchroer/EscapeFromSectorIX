@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dead = false
+            <string>instance_create(x,y,player_spawn)
+dead = false
 </string>
           </argument>
         </arguments>
@@ -206,7 +207,7 @@ if(dead)
     y = ystart;
     dead = false;
    
-   
+   instance_create(x,y,player_spawn)
 }
 </string>
           </argument>

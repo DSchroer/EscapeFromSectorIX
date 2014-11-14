@@ -353,6 +353,8 @@ if(dead)
     nx_x = xstart;
     nx_y = ystart;
     dead = false;
+    
+    instance_create(x,y,player_spawn)
 }
 </string>
           </argument>
