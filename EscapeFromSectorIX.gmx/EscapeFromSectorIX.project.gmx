@@ -7,6 +7,8 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player_feet</sprite>
+    <sprite>sprites\spr_player_feet2</sprite>
     <sprite>sprites\spr_playerEyesGlow</sprite>
     <sprites name="Buttons">
       <sprite>sprites\btn_play</sprite>
@@ -134,7 +136,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41957.2780003819</constant>
+    <constant name="GM_build_date">41957.8140977894</constant>
     <constant name="GM_version">'100'</constant>
   </constants>
   <help>
