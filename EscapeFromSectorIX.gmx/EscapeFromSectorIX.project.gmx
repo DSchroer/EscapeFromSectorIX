@@ -15,6 +15,7 @@
     <sprite>sprites\spr_player_feet</sprite>
     <sprite>sprites\spr_player_feet2</sprite>
     <sprite>sprites\spr_playerEyesGlow</sprite>
+    <sprite>sprites\spr_player_white</sprite>
     <sprites name="Buttons">
       <sprite>sprites\btn_play</sprite>
       <sprite>sprites\btn_quit</sprite>

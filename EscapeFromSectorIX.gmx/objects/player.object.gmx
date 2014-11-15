@@ -3,7 +3,11 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
+<<<<<<< HEAD
   <depth>0</depth>
+=======
+  <depth>1</depth>
+>>>>>>> origin/ElliotBranch
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,10 +30,6 @@
           <argument>
             <kind>1</kind>
             <string>///variables
-
-x_change = x    //used in draw code
-y_change = y    //used in draw code
-
 instance_create(x,y,player_spawn)
 
 mv_speed = 5
@@ -39,6 +39,7 @@ nx_y = y
 nx_x_p = x
 nx_y_p = y
 
+walk_v = 0 //variable used for walking animation
 
 dead = false
 
@@ -262,6 +263,7 @@ if(nx_x != x || nx_y != y)
     {
         audio_play_sound(walk,2,false);
     }
+    walk_v += 5 //increase this incrimentation for faster walk animation
 }
 </string>
           </argument>
@@ -432,26 +434,23 @@ if(dead)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//angle_mod for animation by position on screen
-
-if(image_angle == 135 || image_angle == -45)
-{angle_mod = abs(x - y) mod 100 }
-else
-{angle_mod = abs(x + y) mod 100 }
-if(angle_mod &gt; 50)
-{   angle_mod = 100-angle_mod }
-angle_mod -= 25;
+            <string>//angle_v for walk animation
+angle_v = walk_v mod 100
+if(angle_v &gt; 50)
+{   angle_v = 100-angle_v
+}
+angle_v -= 25
 
 //draw feet
-draw_sprite_ext(spr_player_feet,0,x,y,image_xscale,image_yscale,image_angle + angle_mod*1.2,c_white,1)
-draw_sprite_ext(spr_player_feet2,0,x,y,image_xscale,image_yscale,image_angle - angle_mod,c_white,1)
+draw_sprite_ext(spr_player_feet,0,x,y,image_xscale,image_yscale,image_angle + angle_v*1.2,c_white,1)
+draw_sprite_ext(spr_player_feet2,0,x,y,image_xscale,image_yscale,image_angle - angle_v,c_white,1)
 
 //draw head
-draw_sprite_ext(image_index,0,x,y,image_xscale,image_yscale,image_angle + angle_mod/4,c_white,1)
+draw_sprite_ext(image_index,0,x,y,image_xscale,image_yscale,image_angle + angle_v/4,c_white,1)
 
 //draw eyes glow
 draw_set_blend_mode(bm_add)
-draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,image_angle + angle_mod/4,c_white,random_range(0.2,0.2))
+draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,image_angle + angle_v/4,c_white,random_range(0.2,0.2))
 draw_set_blend_mode(bm_normal)
 
 //check dead
