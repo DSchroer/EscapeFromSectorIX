@@ -42,6 +42,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
+    <background>background\main_tiles</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -136,8 +137,8 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41957.8140977894</constant>
-    <constant name="GM_version">'100'</constant>
+    <constant name="GM_build_date">41958.7168141204</constant>
+    <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
