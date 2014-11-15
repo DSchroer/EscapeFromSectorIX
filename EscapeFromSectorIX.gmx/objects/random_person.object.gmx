@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>dead = false
 walk_v = 0
+nx_x = x
+nx_y = y
 </string>
           </argument>
         </arguments>
@@ -210,6 +212,17 @@ if(dead)
    
    
 }
+
+if(nx_x != x || nx_y != y)
+{   
+    if(!audio_is_playing(walk))
+    {
+        audio_play_sound(walk,2,false);
+    }
+    walk_v += 5 //increase this incrimentation for faster walk animation
+}
+nx_x = x
+nx_y = y
 </string>
           </argument>
         </arguments>

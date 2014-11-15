@@ -3,11 +3,7 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-<<<<<<< HEAD
-  <depth>0</depth>
-=======
   <depth>1</depth>
->>>>>>> origin/ElliotBranch
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
