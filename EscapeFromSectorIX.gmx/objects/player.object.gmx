@@ -3,7 +3,7 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>///variables
-
 instance_create(x,y,player_spawn)
 
 mv_speed = 5
@@ -36,6 +35,7 @@ nx_y = y
 nx_x_p = x
 nx_y_p = y
 
+walk_v = 0 //variable used for walking animation
 
 dead = false
 
@@ -251,6 +251,36 @@ if(move)
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///play walk audio
+
+if(nx_x != x || nx_y != y)
+{
+    if(!audio_is_playing(walk))
+    {
+        audio_play_sound(walk,2,false);
+    }
+    walk_v += 5 //increase this incrimentation for faster walk animation
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///move
 
 if(nx_x &gt; x)
@@ -345,6 +375,8 @@ if(dead)
         d_y = y;
     }
     
+    audio_play_sound(laser_kill,2,false);
+    
     instance_create(x,y,blood)
 
     local_container.deaths++;
@@ -400,11 +432,26 @@ if(dead)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>//angle_v for walk animation
+angle_v = walk_v mod 100
+if(angle_v &gt; 50)
+{   angle_v = 100-angle_v
+}
+angle_v -= 25
+
+//draw feet
+draw_sprite_ext(spr_player_feet,0,x,y,image_xscale,image_yscale,image_angle + angle_v*1.2,c_white,1)
+draw_sprite_ext(spr_player_feet2,0,x,y,image_xscale,image_yscale,image_angle - angle_v,c_white,1)
+
+//draw head
+draw_sprite_ext(image_index,0,x,y,image_xscale,image_yscale,image_angle + angle_v/4,c_white,1)
+
+//draw eyes glow
 draw_set_blend_mode(bm_add)
-draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,image_angle,c_white,random_range(0.2,0.2))
+draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,image_angle + angle_v/4,c_white,random_range(0.2,0.2))
 draw_set_blend_mode(bm_normal)
 
+//check dead
 if(dead)
     draw_text(x-16,y+20,"dead")
     

@@ -1,0 +1,5 @@
+Audio:
+walk track: SoundDawg101
+laser hum: inio
+laser zap: Timbre
+background tracks: http://www.nosoapradio.us/ DST (aka Night Driver)

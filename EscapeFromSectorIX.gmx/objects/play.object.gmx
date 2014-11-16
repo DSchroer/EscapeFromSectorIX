@@ -37,6 +37,8 @@
         p.level = level;
     }
 }
+
+audio_play_sound(title_music,6,true);
 </string>
           </argument>
         </arguments>

@@ -4,10 +4,18 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\laser_kill</sound>
+    <sound>sound\walk</sound>
+    <sound>sound\laser_hum</sound>
+    <sound>sound\title_music</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player_feet</sprite>
+    <sprite>sprites\spr_player_feet2</sprite>
     <sprite>sprites\spr_playerEyesGlow</sprite>
+    <sprite>sprites\spr_player_white</sprite>
     <sprites name="Buttons">
       <sprite>sprites\btn_play</sprite>
       <sprite>sprites\btn_quit</sprite>
@@ -40,6 +48,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
+    <background>background\main_tiles</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
