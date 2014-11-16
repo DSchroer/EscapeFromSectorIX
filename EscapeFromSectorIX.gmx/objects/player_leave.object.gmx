@@ -28,6 +28,8 @@
             <string>///create code
 
 //no creation code
+//instance_create(x,y,player_spawn)
+walk_v = 0
 </string>
           </argument>
         </arguments>
@@ -87,11 +89,24 @@ if(image_alpha&lt;=0)
           <argument>
             <kind>1</kind>
             <string>///draw code
-//draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha/2);
-draw_set_blend_mode(bm_add);
-draw_sprite_ext(spr_player_white,sprite_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha/2);
-draw_sprite_ext(spr_player_white,sprite_index,x,y,image_xscale,image_yscale,image_angle+90,c_white,image_alpha/2);
-draw_set_blend_mode(bm_normal);
+//angle_v for walk animation
+angle_v = walk_v mod 100
+if(angle_v &gt; 50)
+{   angle_v = 100-angle_v
+}
+angle_v -= 25
+
+//draw feet
+draw_sprite_ext(spr_player_feet,0,x,y,image_xscale,image_yscale,image_angle + angle_v*1.2,c_white,1)
+draw_sprite_ext(spr_player_feet2,0,x,y,image_xscale,image_yscale,image_angle - angle_v,c_white,1)
+
+//draw head
+draw_sprite_ext(image_index,0,x,y,image_xscale,image_yscale,image_angle + angle_v/4,c_white,1)
+
+//draw eyes glow
+draw_set_blend_mode(bm_add)
+draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,image_angle + angle_v/4,c_white,random_range(0.2,0.2))
+draw_set_blend_mode(bm_normal)
 </string>
           </argument>
         </arguments>
