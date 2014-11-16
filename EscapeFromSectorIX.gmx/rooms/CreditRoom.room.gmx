@@ -53,7 +53,7 @@
   <instances>
     <instance objName="title_text" x="384" y="32" name="inst_37FF624D" locked="0" code="text = &quot;Credits&quot;&#xA;x2 = x + 275&#xA;y2 = y + 90&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="menu" x="64" y="672" name="inst_C5CD4138" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_overlay" x="128" y="192" name="inst_8783E556" locked="0" code="text = &quot;Design:&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#Programming:&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#Art:&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#Audio:&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#Misc. Contributors:&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="text_overlay" x="128" y="192" name="inst_8783E556" locked="0" code="text = &quot;Design Concept: Dominick Schroer&quot;&#xA;+&quot;#Programming: Dominick Schroer&quot;&#xA;+&quot;#Procedural Art and Character Art: Elliot Coy&quot;&#xA;+&quot;#Tile Sheets and Static Art: Nick Tremblay&quot;&#xA;+&quot;#Game Testing: Jacob Pauley&quot;&#xA;+&quot;#Walk Track: SoundDawg101&quot;&#xA;+&quot;#Laser Hum: Inio&quot;&#xA;+&quot;#Laser Zap: Timbre&quot;&#xA;+&quot;#Background Tracks: http://www.nosoapradio.us/#            DST (aka Night Driver)&quot;&#xA;+&quot;#&quot;&#xA;+&quot;#&quot;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background2" x="32" y="0" w="32" h="32" xo="35" yo="1" id="10003965" name="inst_DD853122" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
