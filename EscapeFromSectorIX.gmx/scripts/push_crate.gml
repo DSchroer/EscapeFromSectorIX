@@ -17,8 +17,12 @@ if(t)
 }else if(collision_point(x + dx,y + dy,wall,true,true))
 {
     return 1
+}else if(collision_point(x + dx,y + dy,bouncer,true,true))
+{
+    return 1
 }else{
     x += dx
     y += dy
+    return 0
 }
 

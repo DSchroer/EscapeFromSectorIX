@@ -28,7 +28,7 @@
             <string>text = "TEXT TEXT TEXT"
 pos = 1
 cur_text = ""
-skip = true;
+skip = false;
 alms = 1;
 
 x1 = room_width * 0.10
