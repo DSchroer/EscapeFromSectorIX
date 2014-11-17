@@ -138,6 +138,7 @@
     <instance objName="turret" x="672" y="608" name="inst_B93F6352" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="turret_fixed" x="480" y="256" name="inst_B947E849" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="turret_fixed" x="896" y="608" name="inst_8BCA55B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="game_music" x="192" y="144" name="inst_3904C2C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="main_tiles" x="464" y="240" w="32" h="32" xo="64" yo="64" id="10005060" name="inst_0F8BE968" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

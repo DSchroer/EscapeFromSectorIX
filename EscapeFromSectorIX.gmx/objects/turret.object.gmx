@@ -65,6 +65,27 @@ l[1].direction = direction + pi;
 l[2].direction = direction + (3 * pi/2);
 l[3].direction = direction;
 
+with(l[0])
+{
+    calculate_laser()
+}
+
+with(l[1])
+{
+    calculate_laser()
+}
+
+with(l[2])
+{
+    calculate_laser()
+}
+
+with(l[3])
+{
+    calculate_laser()
+}
+
+
 image_angle = radtodeg(direction);
 </string>
           </argument>

@@ -77,6 +77,11 @@ walk_v = 0
 
 if(!instance_exists(textPrompt))
 {
+    if(!audio_is_playing(walk))
+    {
+        audio_play_sound(walk,2,false);
+    }
+    
     speed = oldS;
     walk_v += 5
 }else{

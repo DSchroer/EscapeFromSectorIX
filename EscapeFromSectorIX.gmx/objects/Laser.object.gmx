@@ -76,7 +76,8 @@ ey = y + (cos(direction) * length)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lx = x
+            <string>/*
+lx = x
 ly = y
 
 move_contact_solid(radtodeg(direction - (pi/2)),max_length)
@@ -97,7 +98,7 @@ if(!audio_is_playing(laser_hum))
 {
     audio_play_sound(laser_hum,3,false);
 }
-
+*/
 </string>
           </argument>
         </arguments>

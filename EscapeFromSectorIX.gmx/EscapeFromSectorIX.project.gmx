@@ -8,7 +8,13 @@
     <sound>sound\laser_kill</sound>
     <sound>sound\walk</sound>
     <sound>sound\laser_hum</sound>
-    <sound>sound\title_music</sound>
+    <sounds name="background">
+      <sound>sound\angry_robot</sound>
+      <sound>sound\break_out</sound>
+      <sound>sound\garote</sound>
+      <sound>sound\street_fight</sound>
+      <sound>sound\x_to_fly</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -44,6 +50,7 @@
       <sprite>sprites\spr_turret_fixed</sprite>
       <sprite>sprites\lazer_flare</sprite>
       <sprite>sprites\spr_turret</sprite>
+      <sprite>sprites\spr_bouncer</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -55,6 +62,7 @@
     <script>scripts\create_ui.gml</script>
     <script>scripts\push_crate.gml</script>
     <script>scripts\end_game.gml</script>
+    <script>scripts\calculate_laser.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_main</font>
@@ -116,6 +124,7 @@
     </objects>
     <object>objects\player_spawn</object>
     <object>objects\player_leave</object>
+    <object>objects\game_music</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
@@ -129,6 +138,7 @@
       <room>rooms\tight_turns</room>
       <room>rooms\laser_hall</room>
       <room>rooms\spinner_vent</room>
+      <room>rooms\doom_box</room>
     </rooms>
     <rooms name="BoxLevels">
       <room>rooms\box_tutorial</room>
@@ -143,7 +153,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41959.9030931597</constant>
+    <constant name="GM_build_date">41960.0383398611</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
