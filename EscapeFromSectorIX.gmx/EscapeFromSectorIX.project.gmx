@@ -71,38 +71,14 @@
     <font>fonts\PromptFont</font>
   </fonts>
   <objects name="objects">
-    <object>objects\wall</object>
-    <object>objects\player</object>
-    <objects name="Enemies">
-      <objects name="spinner">
-        <object>objects\turret</object>
-      </objects>
-      <object>objects\Laser</object>
-      <objects name="bounce">
-        <object>objects\bouncer</object>
-      </objects>
-      <object>objects\turret_fixed</object>
-    </objects>
     <objects name="Containers">
       <object>objects\local_container</object>
     </objects>
-    <objects name="Progression">
-      <object>objects\door</object>
-    </objects>
-    <objects name="GUI">
-      <object>objects\death_counter</object>
-      <object>objects\frame_viewer</object>
-    </objects>
-    <objects name="Clones">
-      <object>objects\random_person</object>
-      <object>objects\end_player</object>
-    </objects>
-    <object>objects\crate</object>
-    <objects name="Display">
+    <objects name="Text_Display">
       <object>objects\text_overlay</object>
       <object>objects\title_text</object>
+      <object>objects\textPrompt</object>
     </objects>
-    <object>objects\blood</object>
     <objects name="Buttons">
       <object>objects\play</object>
       <object>objects\menu</object>
@@ -111,20 +87,45 @@
       <object>objects\credits</object>
       <object>objects\button_box</object>
     </objects>
-    <object>objects\obj_gore</object>
-    <object>objects\glass</object>
-    <object>objects\push_glass</object>
-    <object>objects\game_level</object>
-    <object>objects\textPrompt</object>
-    <object>objects\shadow</object>
-    <object>objects\outside</object>
     <objects name="Control">
       <object>objects\level_select</object>
       <object>objects\level_jump</object>
+      <object>objects\game_level</object>
     </objects>
-    <object>objects\player_spawn</object>
-    <object>objects\player_leave</object>
-    <object>objects\game_music</object>
+    <objects name="Special">
+      <objects name="Clones">
+        <object>objects\random_person</object>
+        <object>objects\end_player</object>
+        <object>objects\player_leave</object>
+        <object>objects\player_spawn</object>
+      </objects>
+      <object>objects\game_music</object>
+      <object>objects\blood</object>
+    </objects>
+    <objects name="Placeable">
+      <objects name="Enemies">
+        <objects name="Enemies_Resources">
+          <object>objects\Laser</object>
+        </objects>
+        <object>objects\bouncer</object>
+        <object>objects\turret</object>
+        <object>objects\turret_fixed</object>
+      </objects>
+      <objects name="Playable">
+        <object>objects\player</object>
+      </objects>
+      <objects name="Level">
+        <object>objects\wall</object>
+        <object>objects\glass</object>
+        <object>objects\crate</object>
+        <object>objects\door</object>
+        <object>objects\push_glass</object>
+      </objects>
+    </objects>
+    <objects name="Final">
+      <object>objects\outside</object>
+      <object>objects\shadow</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
@@ -148,14 +149,15 @@
     <rooms name="GlassLevels">
       <room>rooms\glass_tutorial</room>
       <room>rooms\spinner_glass</room>
+      <room>rooms\the_spinners_four</room>
     </rooms>
     <rooms name="TestLevels">
       <room>rooms\Escape_Scene</room>
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41960.0576143981</constant>
-    <constant name="GM_version">'1.0.0.1'</constant>
+    <constant name="GM_build_date">41960.0967546528</constant>
+    <constant name="GM_version">'1.0.0.2'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
