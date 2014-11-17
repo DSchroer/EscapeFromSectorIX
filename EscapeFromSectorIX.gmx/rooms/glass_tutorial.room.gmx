@@ -150,7 +150,7 @@
     <instance objName="wall" x="672" y="224" name="inst_7B016C80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="672" y="256" name="inst_E8739194" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="480" y="512" name="inst_8F13A581" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="textPrompt" x="112" y="384" name="inst_C8002F02" locked="0" code="text = &quot;So they are building walls out of glass now?#&quot;&#xA;+ &quot;#The lasers pass right through.&quot;&#xA;+&quot;##But we cant...&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="textPrompt" x="112" y="384" name="inst_C8002F02" locked="0" code="text = &quot;So they are building walls out of glass now?#&quot;&#xA;+ &quot;#The lasers pass right through them.&quot;&#xA;+&quot;##But we cant...&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="main_tiles" x="240" y="112" w="32" h="32" xo="64" yo="64" id="10007937" name="inst_00BCBE8A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
