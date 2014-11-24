@@ -29,6 +29,8 @@
 beam = instance_create(x,y,Laser)
 direction = image_angle
 bounce = false
+dirset = false
+firstdir = 0
 
 </string>
           </argument>
@@ -52,9 +54,15 @@ bounce = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>motion_set(direction,speed)
+            <string>if(!dirset)
+{
+    firstdir = direction;
+    dirset = true;
+}
 
-if(!bounce)
+motion_set(direction,speed)
+
+if(firstdir == direction)
 {
     beam.direction = degtorad(direction + 180)
     image_angle = direction
