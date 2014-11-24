@@ -112,6 +112,7 @@
     <instance objName="wall" x="288" y="256" name="inst_DB73530E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="352" y="352" name="inst_8562AB9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door" x="416" y="96" name="inst_835817AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pickup" x="288" y="304" name="inst_BDF97A71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="main_tiles" x="336" y="112" w="32" h="32" xo="32" yo="32" id="10004824" name="inst_4EC210C1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

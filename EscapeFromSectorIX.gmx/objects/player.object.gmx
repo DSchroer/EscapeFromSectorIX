@@ -38,6 +38,7 @@ nx_y_p = y
 walk_v = 0 //variable used for walking animation
 
 dead = false
+pick = false
 
 create_ui()
 
@@ -389,6 +390,12 @@ if(dead)
     nx_x = xstart;
     nx_y = ystart;
     dead = false;
+    
+    if(instance_exists(pickup))
+    {
+        pick = false;
+        pickup.visible = true;
+    }
     
     instance_create(x,y,player_spawn)
 }
