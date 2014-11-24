@@ -128,6 +128,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room16</room>
     <room>rooms\MainMenu</room>
     <room>rooms\LevelSelect</room>
     <room>rooms\CreditRoom</room>
@@ -156,7 +157,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41967.9480098727</constant>
+    <constant name="GM_build_date">41967.9524520833</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

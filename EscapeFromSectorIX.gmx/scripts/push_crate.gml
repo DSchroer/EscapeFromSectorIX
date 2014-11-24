@@ -5,15 +5,17 @@ dy = argument1
 t = collision_point(x + dx,y + dy,crate,true,true)
 if(t)
 {
+    ret = 0;
     with(t)
     {
-        if(!push_crate(other.dx,other.dy))
+        other.ret = push_crate(other.dx,other.dy);
+        if(!other.ret)
         {
             other.x += other.dx
             other.y += other.dy
         }
     }
-    
+    return ret;
 }else if(collision_point(x + dx,y + dy,wall,true,true))
 {
     return 1
@@ -25,4 +27,4 @@ if(t)
     y += dy
     return 0
 }
-
+return 0
