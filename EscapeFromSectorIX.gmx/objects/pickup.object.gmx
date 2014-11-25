@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>if(visible)
 {
-    player.pick = true
     visible = false
 }
 </string>

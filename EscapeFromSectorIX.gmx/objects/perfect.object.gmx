@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>
 speed = 0
-text = "Perfect Level!";
+text = "Perfect Clear!";
 pos = 1;
 disp = "";
 font = PerfectFont
@@ -106,19 +106,25 @@ wait = true
 draw_set_font(font)
 if(pos &lt;= string_length(text))
 {
+    draw_set_colour(make_colour_rgb(153,204,0));
+    draw_rectangle(x - 10,y - 10 ,x + ((string_length(text) - 3) * font_get_size(font)) + 10,y + (2*font_get_size(font)) + 10,false)
+    
     draw_set_colour(make_colour_rgb(31,31,31));
-    draw_rectangle(x,y ,x + ((string_length(text) - 1) * font_get_size(font)),y + (2*font_get_size(font)),false)
+    draw_rectangle(x,y ,x + ((string_length(text) - 3) * font_get_size(font)),y + (2*font_get_size(font)),false)
     draw_set_colour(c_white)
     
     draw_text_ext_transformed(x,y,disp,-1,-1,1,1,0)
 }else{
     off = string_length(text) - string_length(disp)
     
+    draw_set_colour(make_colour_rgb(153,204,0));
+    draw_rectangle(x + (off * font_get_size(font)) - 10,y  - 10,x + ((string_length(text) - 3) * font_get_size(font)) + 10,y + (2*font_get_size(font)) + 10,false)
+    
     draw_set_colour(make_colour_rgb(31,31,31));
-    draw_rectangle(x + (off * font_get_size(font)),y ,x + ((string_length(text) - 1) * font_get_size(font)),y + (2*font_get_size(font)),false)
+    draw_rectangle(x + (off * font_get_size(font)),y ,x + ((string_length(text) - 3) * font_get_size(font)),y + (2*font_get_size(font)),false)
     draw_set_colour(c_white)
     
-    draw_text_ext_transformed(x + (off * font_get_size(font)),y,disp,-1,-1,1,1,0)
+    draw_text_ext_transformed(x + (off * font_get_size(font) * 0.8),y,disp,-1,-1,1,1,0)
     
 }
 </string>

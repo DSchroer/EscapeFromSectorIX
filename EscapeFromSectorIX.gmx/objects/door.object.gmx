@@ -56,9 +56,16 @@ if(active)
         //to test for bonus coin
         if(instance_exists(pickup))
         {
-            if(player.pick)
+            perfect = true;
+            with(pickup)
             {
-                prompt = instance_create(x,y,perfect);
+                for(t = 0; t &lt; instance_count; t++)
+                {
+                    if(visible)
+                    {
+                        prompt = instance_create(x,y,perfect);
+                    }
+                }
             }
         }
     
