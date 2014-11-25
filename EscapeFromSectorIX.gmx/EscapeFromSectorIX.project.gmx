@@ -70,6 +70,7 @@
     <font>fonts\TitleFont</font>
     <font>fonts\ButtonFont</font>
     <font>fonts\PromptFont</font>
+    <font>fonts\PerfectFont</font>
   </fonts>
   <objects name="objects">
     <objects name="Containers">
@@ -128,6 +129,7 @@
       <object>objects\outside</object>
       <object>objects\shadow</object>
     </objects>
+    <object>objects\perfect</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
@@ -158,7 +160,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41967.960549537</constant>
+    <constant name="GM_build_date">41968.0044356829</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

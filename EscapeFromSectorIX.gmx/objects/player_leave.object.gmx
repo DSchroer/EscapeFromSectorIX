@@ -63,7 +63,7 @@ if(image_alpha&gt;0.5)
 }
 image_alpha -= 0.05
 
-if(image_alpha&lt;=0)
+if(image_alpha&lt;=0 &amp;&amp; !instance_exists(perfect))
 {   room_goto_next()
 }
 </string>
