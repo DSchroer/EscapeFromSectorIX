@@ -30,6 +30,8 @@ direction = 0;
 
 
 max_length = max(x,y,room_height - y, room_width-x)
+
+laser_calculate_elliot()
 </string>
           </argument>
         </arguments>
@@ -59,7 +61,7 @@ ey = y + (cos(direction) * length)
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="1">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -76,29 +78,7 @@ ey = y + (cos(direction) * length)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-lx = x
-ly = y
-
-move_contact_solid(radtodeg(direction - (pi/2)),max_length)
-
-ex = x
-ey = y
-
-x = lx
-y = ly
-
-p = collision_line(x,y,ex,ey,player,true,true)
-if(p)
-{
-    p.dead = true
-}
-
-if(!audio_is_playing(laser_hum))
-{
-    audio_play_sound(laser_hum,3,false);
-}
-*/
+            <string>laser_calculate_draw()
 </string>
           </argument>
         </arguments>
@@ -121,37 +101,18 @@ if(!audio_is_playing(laser_hum))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>col = make_colour_rgb(255,0,0)
-//cols = make_colour_rgb(100,0,0)
-
-//draw_set_alpha(0.4);
-//draw_line_width_colour(x,y,ex,ey,9,col,col)
-
-//draw_set_alpha(1);
-
-
-
-//draw_sprite_ext(lazer_flare,0,ex,ey,0.8,0.8,direction + 90,cols,1)
-
-elliot = 4;
-scale = random_range(5,15);
-
-draw_set_alpha(0.2);
-//draw_line_width_colour(x, y, ex, ey, scale, c_black, c_black);
-//draw_circle_colour(ex,ey,scale,c_black,c_black,false);
-draw_set_blend_mode(bm_normal);
-
-draw_set_alpha(0.2);
-for(i=elliot; i&gt;0;i--){
-    draw_line_width_colour(x, y, ex, ey, scale*(i/elliot), col, col);
-    draw_circle_colour(ex,ey,scale*(i/elliot),col,col,false);
+            <string>draw_set_alpha(0.2);
+scaled_elliot = 0
+for(i=ELLIOT_NUM; i&gt;0;i--){
+    scaled_elliot = scale * elliot_val[i];
+    draw_line_width_colour(x, y, ex, ey, scaled_elliot, LASER_COLOR, LASER_COLOR);
+    draw_circle_colour(ex,ey,scaled_elliot, LASER_COLOR, LASER_COLOR,false);
 }
 draw_set_alpha(0.4);
 
 draw_line_width_colour(x, y, ex, ey, scale/10, c_white, c_white);
 draw_circle_colour(ex,ey,scale/3,c_white,c_white,false);
 
-draw_set_blend_mode(bm_normal);
 draw_set_alpha(1);
 </string>
           </argument>

@@ -223,6 +223,8 @@ if(nx_x != x || nx_y != y)
 }
 nx_x = x
 nx_y = y
+
+player_update_animation()
 </string>
           </argument>
         </arguments>

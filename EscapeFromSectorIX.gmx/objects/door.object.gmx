@@ -54,19 +54,27 @@ if(active)
     {   
     
         //to test for bonus coin
+        per = true;
         if(instance_exists(pickup))
         {
-            perfect = true;
+            
             with(pickup)
             {
                 for(t = 0; t &lt; instance_count; t++)
                 {
                     if(visible)
                     {
-                        prompt = instance_create(x,y,perfect);
+                        other.per = false;
                     }
                 }
             }
+        }
+        
+        if(per)
+        {
+            prompt = instance_create(x,y,perfect);
+
+            game_level.plevel[room] = true;
         }
     
         with(instance_nearest(x,y,player))

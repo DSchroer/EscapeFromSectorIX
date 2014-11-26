@@ -87,6 +87,7 @@ if(!instance_exists(textPrompt))
 }else{
     speed = 0;
 }
+player_update_animation()
 
 if(x &lt; -10)
     room_goto(r)

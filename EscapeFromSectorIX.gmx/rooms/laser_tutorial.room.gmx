@@ -176,7 +176,6 @@
     <instance objName="wall" x="672" y="160" name="inst_19972C6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door" x="704" y="160" name="inst_78DFE208" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="textPrompt" x="64" y="224" name="inst_E84F90DA" locked="0" code="text = &quot;Lasers! They always used lasers on us!#&quot;&#xA;+&quot;We could never get away from them.##&quot;&#xA;+&quot;Please try and avoid them.&quot;&#xA;+&quot;##They will kill us.&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pickup" x="832" y="448" name="inst_B0D9D347" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="main_tiles" x="144" y="176" w="32" h="32" xo="64" yo="64" id="10005356" name="inst_404A1873" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

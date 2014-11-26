@@ -64,6 +64,12 @@
     <script>scripts\push_crate.gml</script>
     <script>scripts\end_game.gml</script>
     <script>scripts\calculate_laser.gml</script>
+    <scripts name="PlayerScripts">
+      <script>scripts\player_update_animation.gml</script>
+    </scripts>
+    <scripts name="LaserScripts">
+      <script>scripts\laser_calculate_draw.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_main</font>
