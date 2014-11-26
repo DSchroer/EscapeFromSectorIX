@@ -42,7 +42,7 @@
 collen = 0;
 colors[0] = c_white
 colors[1] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
-colors[2] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
+colors[2] = make_colour_rgb(25,25,25)
 colors[3] = make_colour_rgb(0,255,255)
 colors[4] = c_green
 colors[5] = make_colour_rgb(75,75,255)
