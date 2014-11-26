@@ -30,11 +30,18 @@
     f = file_text_open_read("level");
     if(f)
     {
-        level = file_text_read_real(f);
-        file_text_close(f);
-     
         p = instance_create(0,0,game_level);
-        p.level = level;
+    
+        p.level = file_text_read_real(f);
+        
+        t = 0;
+        while(!file_text_eof(f))
+        {
+            p.plevel[t++] = file_text_read_real(f);
+        }
+        
+        file_text_close(f);
+
     }
 }
 

@@ -25,10 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dead = false
+            <string>
+
+
+dead = false
 walk_v = 0
 nx_x = x
 nx_y = y
+sound = true
+EYE_COLOR = c_white
 </string>
           </argument>
         </arguments>
@@ -215,7 +220,7 @@ if(dead)
 
 if(nx_x != x || nx_y != y)
 {   
-    if(!audio_is_playing(walk))
+    if(!audio_is_playing(walk) &amp;&amp; sound)
     {
         audio_play_sound(walk,2,false);
     }
@@ -252,6 +257,32 @@ player_update_animation()
           <argument>
             <kind>4</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="random_person">
+      <action>
+        <libid>1</libid>
+        <id>115</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_bounce</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>

@@ -42,6 +42,8 @@ FOOT_ANGLE = 0
 FOOT_2_ANGLE = 0
 HEAD_ANGLE = 0
 
+EYE_COLOR = game_level.col
+
 dead = false
 
 create_ui()
@@ -473,15 +475,15 @@ player_update_animation()
           <argument>
             <kind>1</kind>
             <string>//draw feet
-draw_sprite_ext(spr_player_feet,0,x,y,image_xscale,image_yscale,FOOT_ANGLE,c_white,1)
-draw_sprite_ext(spr_player_feet2,0,x,y,image_xscale,image_yscale,FOOT_2_ANGLE,c_white,1)
+draw_sprite_ext(spr_player_feet,0,x,y,image_xscale,image_yscale,FOOT_ANGLE,EYE_COLOR,1)
+draw_sprite_ext(spr_player_feet2,0,x,y,image_xscale,image_yscale,FOOT_2_ANGLE,EYE_COLOR,1)
 
 //draw head
-draw_sprite_ext(image_index,0,x,y,image_xscale,image_yscale,HEAD_ANGLE,c_white,1)
+draw_sprite_ext(image_index,0,x,y,image_xscale,image_yscale,HEAD_ANGLE,EYE_COLOR,1)
 
 //draw eyes glow
 draw_set_blend_mode(bm_add)
-draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,HEAD_ANGLE,c_white,0.2)
+draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,HEAD_ANGLE,EYE_COLOR,0.2)
 draw_set_blend_mode(bm_normal)
 
 

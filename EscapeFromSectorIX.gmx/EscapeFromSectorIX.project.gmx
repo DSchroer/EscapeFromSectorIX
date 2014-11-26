@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\laser_kill</sound>
@@ -53,6 +54,7 @@
       <sprite>sprites\spr_bouncer</sprite>
     </sprites>
     <sprite>sprites\spr_token</sprite>
+    <sprite>sprites\block_collide</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
@@ -70,11 +72,15 @@
     <scripts name="LaserScripts">
       <script>scripts\laser_calculate_draw.gml</script>
     </scripts>
+    <scripts name="CreditScript">
+      <script>scripts\credit_next.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_main</font>
     <font>fonts\TitleFont</font>
     <font>fonts\ButtonFont</font>
+    <font>fonts\CreditFont</font>
     <font>fonts\PromptFont</font>
     <font>fonts\PerfectFont</font>
   </fonts>
@@ -86,6 +92,8 @@
       <object>objects\text_overlay</object>
       <object>objects\title_text</object>
       <object>objects\textPrompt</object>
+      <object>objects\creadits_text</object>
+      <object>objects\credit_select</object>
     </objects>
     <objects name="Buttons">
       <object>objects\play</object>
