@@ -28,6 +28,7 @@
             <string>if(visible)
 {
     visible = false
+    audio_play_sound(ding,5,false)
 }
 </string>
           </argument>

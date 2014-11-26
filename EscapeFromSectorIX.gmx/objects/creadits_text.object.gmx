@@ -37,6 +37,7 @@
 "Walk Track:SoundDawg101:www.freesound.org#"+
 "Laser Hum:Inio:www.freesound.org#"+
 "Laser Zap:Timbre:www.freesound.org#"+
+"Coin Ring:NoiseCollector:www.freesound.org#"+
 "Background Tracks:DST (aka Night Driver):http://www.nosoapradio.us/#"
 
 collen = 0;
@@ -53,6 +54,7 @@ colors[9] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range
 colors[10] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
 colors[11] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
 colors[12] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
+colors[13] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
 
 credpos = 1
 
