@@ -30,10 +30,12 @@
 "Procedural Artist:Elliot Coy#"+
 "Game Design Professor:Jeff Mundee#"+
 "Chief Game Breaker:Jacob Pauley#"+
+"Ray Tracing Enthusiast:Yoann Arseneau#"+
 "Personal Advisor:Joel Dunphy#"+
 "Personal Advisor:Matt Johnstone#"+
 "Tester:Justin Gallant#"+
 "Tester:Brennen DeCarufel#"+
+"Tester:Dylan Arbeau#"+
 "Walk Track:SoundDawg101:www.freesound.org#"+
 "Laser Hum:Inio:www.freesound.org#"+
 "Laser Zap:Timbre:www.freesound.org#"+
@@ -42,19 +44,21 @@
 
 collen = 0;
 colors[0] = c_white
-colors[1] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
+colors[1] = make_colour_rgb(100,100,255)
 colors[2] = make_colour_rgb(25,25,25)
 colors[3] = make_colour_rgb(0,255,255)
 colors[4] = c_green
-colors[5] = make_colour_rgb(75,75,255)
-colors[6] = make_colour_rgb(255,25,25)
-colors[7] = make_colour_rgb(25,25,255)
-colors[8] = make_colour_rgb(75,255,75)
-colors[9] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
-colors[10] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
-colors[11] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
-colors[12] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
-colors[13] = make_colour_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
+colors[5] = make_colour_rgb(200,117,51)
+colors[6] = make_colour_rgb(75,75,255)
+colors[7] = make_colour_rgb(255,25,25)
+colors[8] = make_colour_rgb(25,25,255)
+colors[9] = make_colour_rgb(75,255,75)
+colors[10] = make_colour_rgb(124,252,0)
+colors[11] = c_aqua
+colors[12] = c_fuchsia
+colors[13] = c_gray
+colors[14] = c_purple
+colors[15] = c_teal
 
 credpos = 1
 

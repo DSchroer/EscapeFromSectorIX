@@ -10,7 +10,7 @@ x = lx
 y = ly
 
 
-p = collision_line(x,y,ex,ey,player,false,true)
+p = collision_line(x,y,ex,ey,player,true,true)
 if(p)
 {
     p.dead = true
