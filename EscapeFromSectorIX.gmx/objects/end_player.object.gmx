@@ -28,6 +28,7 @@
             <string>nspeed = 0;
 walk_v = 0
 EYE_COLOR = c_white
+game_level.plevel[room] = true
 </string>
           </argument>
         </arguments>
