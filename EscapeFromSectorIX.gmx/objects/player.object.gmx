@@ -160,7 +160,7 @@ if(move)
         yp = nx_y - y
         with(t)
         {
-            if(!push_crate(other.xp,other.yp))
+            if(push_crate(other.xp,other.yp))
             {
                 other.nx_x = other.x
                 other.nx_y = other.y
