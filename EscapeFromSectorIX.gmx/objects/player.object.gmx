@@ -42,11 +42,11 @@ FOOT_ANGLE = 0
 FOOT_2_ANGLE = 0
 HEAD_ANGLE = 0
 
-EYE_COLOR = game_level.col
-
 dead = false
 
 create_ui()
+
+EYE_COLOR = game_level.col
 
 if(room &gt; game_level.level)
     game_level.level = room
