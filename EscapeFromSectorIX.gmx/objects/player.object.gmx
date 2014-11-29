@@ -37,9 +37,16 @@ nx_y_p = y
 
 walk_v = 0 //variable used for walking animation
 
+//Animation variables
+FOOT_ANGLE = 0
+FOOT_2_ANGLE = 0
+HEAD_ANGLE = 0
+
 dead = false
 
 create_ui()
+
+EYE_COLOR = game_level.col
 
 if(room &gt; game_level.level)
     game_level.level = room
@@ -153,7 +160,7 @@ if(move)
         yp = nx_y - y
         with(t)
         {
-            if(!push_crate(other.xp,other.yp))
+            if(push_crate(other.xp,other.yp))
             {
                 other.nx_x = other.x
                 other.nx_y = other.y
@@ -390,8 +397,39 @@ if(dead)
     nx_y = ystart;
     dead = false;
     
+    if(instance_exists(pickup))
+    {
+        with(pickup)
+        {
+            visible = true;
+        }
+    }
+    
     instance_create(x,y,player_spawn)
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Update animation variables
+
+player_update_animation()
 </string>
           </argument>
         </arguments>
@@ -436,23 +474,16 @@ if(dead)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//angle_v for walk animation
-angle_v = walk_v mod 100
-if(angle_v &gt; 50)
-{   angle_v = 100-angle_v
-}
-angle_v -= 25
-
-//draw feet
-draw_sprite_ext(spr_player_feet,0,x,y,image_xscale,image_yscale,image_angle + angle_v*1.2,c_white,1)
-draw_sprite_ext(spr_player_feet2,0,x,y,image_xscale,image_yscale,image_angle - angle_v,c_white,1)
+            <string>//draw feet
+draw_sprite_ext(spr_player_feet,0,x,y,image_xscale,image_yscale,FOOT_ANGLE,EYE_COLOR,1)
+draw_sprite_ext(spr_player_feet2,0,x,y,image_xscale,image_yscale,FOOT_2_ANGLE,EYE_COLOR,1)
 
 //draw head
-draw_sprite_ext(image_index,0,x,y,image_xscale,image_yscale,image_angle + angle_v/4,c_white,1)
+draw_sprite_ext(image_index,0,x,y,image_xscale,image_yscale,HEAD_ANGLE,EYE_COLOR,1)
 
 //draw eyes glow
 draw_set_blend_mode(bm_add)
-draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,image_angle + angle_v/4,c_white,random_range(0.2,0.2))
+draw_sprite_ext(spr_playerEyesGlow,0,x,y,image_xscale,image_yscale,HEAD_ANGLE,EYE_COLOR,0.2)
 draw_set_blend_mode(bm_normal)
 
 

@@ -89,65 +89,11 @@ if(alphaVar&lt;=0)
             <string>///draw code
 
 draw_set_blend_mode(bm_max);
-draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle-36,c_white,alphaVar);
-draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle,c_white,alphaVar);
-draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle+36,c_white,alphaVar);
-/*
-partSystemBlood = part_system_create();
-part_system_position(partSystemBlood,x,y);
-part_system_depth(partSystemBlood,-1000);
-partEmitBlood = part_emitter_create(partSystemBlood);
 
-partTypeBlood = part_type_create();
-part_type_colour_mix(partTypeBlood,merge_colour(c_red,c_black,0.5),c_black);
-part_type_life(partTypeBlood,5,20);
-part_type_shape(partTypeBlood,pt_shape_flare);
-part_type_scale(partTypeBlood,0.3,0.3);
-part_type_direction(partTypeBlood,0,360,-1,0);
-part_type_speed(partTypeBlood,0.1,0.5,0.05,0);
+draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle-36,game_level.col,alphaVar);
+draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle,game_level.col,alphaVar);
+draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle+36,game_level.col,alphaVar);
 
-partTypeBlood2 = part_type_create();
-part_type_alpha2(partTypeBlood2,1,0.1);
-part_type_colour_mix(partTypeBlood2,c_black,merge_colour(c_red,c_black,0.5));
-part_type_life(partTypeBlood2,5,20);
-part_type_shape(partTypeBlood2,pt_shape_spark);
-part_type_scale(partTypeBlood2,0.4,0.4);
-part_type_direction(partTypeBlood2,0,360,-1,0);
-part_type_speed(partTypeBlood2,0.1,0.5,0,0);
-
-part_type_death(partTypeBlood,1,partTypeBlood2);
-
-part_emitter_burst(partSystemBlood,partEmitBlood,partTypeBlood,10);
-part_emitter_region(partSystemBlood,partEmitBlood,x,x,y,y,ps_shape_rectangle,ps_distr_linear);
-
-draw_set_blend_mode(bm_normal);
-
-
-///draw code
-
-draw_set_blend_mode(bm_add);
-//draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle-36,c_white,alphaVar);
-//draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle,c_white,alphaVar);
-//draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle+36,c_white,alphaVar);
-
-ps_spawn = part_system_create();
-part_system_position(ps_spawn,x,y);
-part_system_depth(ps_spawn,-1000);
-
-partSpawn = part_type_create();
-part_type_colour_mix(partSpawn,c_lime,c_white);
-part_type_life(partSpawn,5,20);
-part_type_shape(partSpawn,pt_shape_flare);
-part_type_scale(partSpawn,0.4,0.4);
-part_type_direction(partSpawn,0,360,-1,0);
-part_type_speed(partSpawn,-10,5,-1,0);
-part_type_alpha3(partSpawn,0,1,1);
-
-pe_spawn = part_emitter_create(ps_spawn);
-part_emitter_burst(ps_spawn,pe_spawn,partSpawn,10);
-part_emitter_region(ps_spawn,pe_spawn,x-132,x+132,y-32,y+32,ps_shape_rectangle,ps_distr_invgaussian);
-
-part_system_destroy(ps_spawn);*/
 draw_set_blend_mode(bm_normal);
 </string>
           </argument>

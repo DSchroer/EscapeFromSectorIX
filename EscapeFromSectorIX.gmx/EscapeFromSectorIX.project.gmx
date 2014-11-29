@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\laser_kill</sound>
@@ -15,6 +16,7 @@
       <sound>sound\street_fight</sound>
       <sound>sound\x_to_fly</sound>
     </sounds>
+    <sound>sound\ding</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -52,6 +54,8 @@
       <sprite>sprites\spr_turret</sprite>
       <sprite>sprites\spr_bouncer</sprite>
     </sprites>
+    <sprite>sprites\spr_token</sprite>
+    <sprite>sprites\block_collide</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
@@ -63,12 +67,23 @@
     <script>scripts\push_crate.gml</script>
     <script>scripts\end_game.gml</script>
     <script>scripts\calculate_laser.gml</script>
+    <scripts name="PlayerScripts">
+      <script>scripts\player_update_animation.gml</script>
+    </scripts>
+    <scripts name="LaserScripts">
+      <script>scripts\laser_calculate_draw.gml</script>
+    </scripts>
+    <scripts name="CreditScript">
+      <script>scripts\credit_next.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_main</font>
     <font>fonts\TitleFont</font>
     <font>fonts\ButtonFont</font>
+    <font>fonts\CreditFont</font>
     <font>fonts\PromptFont</font>
+    <font>fonts\PerfectFont</font>
   </fonts>
   <objects name="objects">
     <objects name="Containers">
@@ -78,6 +93,8 @@
       <object>objects\text_overlay</object>
       <object>objects\title_text</object>
       <object>objects\textPrompt</object>
+      <object>objects\creadits_text</object>
+      <object>objects\credit_select</object>
     </objects>
     <objects name="Buttons">
       <object>objects\play</object>
@@ -121,14 +138,15 @@
         <object>objects\door</object>
         <object>objects\push_glass</object>
       </objects>
+      <object>objects\pickup</object>
     </objects>
     <objects name="Final">
       <object>objects\outside</object>
       <object>objects\shadow</object>
     </objects>
+    <object>objects\perfect</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room16</room>
     <room>rooms\MainMenu</room>
     <room>rooms\LevelSelect</room>
     <room>rooms\CreditRoom</room>
@@ -157,7 +175,7 @@
     </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41967.9524520833</constant>
+    <constant name="GM_build_date">41968.7623900347</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

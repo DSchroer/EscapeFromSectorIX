@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>level = 0
+plevel[0] = false
+col = c_white
 </string>
           </argument>
         </arguments>

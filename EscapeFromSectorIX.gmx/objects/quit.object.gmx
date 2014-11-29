@@ -30,6 +30,12 @@
     file_delete("level")
     f = file_text_open_write("level");
     file_text_write_real(f, game_level.level);
+    
+    for(t = 0; t &lt; array_length_1d(game_level.plevel); t++)
+    {
+        file_text_write_real(f, game_level.plevel[t]);
+    }
+    
     file_text_close(f);
 }
 </string>
