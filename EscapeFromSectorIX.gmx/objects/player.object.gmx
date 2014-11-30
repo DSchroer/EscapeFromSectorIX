@@ -158,12 +158,16 @@ if(move)
     {
         xp = nx_x - x
         yp = nx_y - y
+ 
         with(t)
         {
-            if(push_crate(other.xp,other.yp))
+            push = push_crate(other.xp,other.yp)
+ 
+            if(push)
             {
                 other.nx_x = other.x
                 other.nx_y = other.y
+                other.move = false
             }
         }
     }

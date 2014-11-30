@@ -33,6 +33,9 @@ nx_y = y
 
 d_x = nx_x
 d_y = nx_y
+
+cx = x
+cy = y
 </string>
           </argument>
         </arguments>
@@ -111,6 +114,15 @@ if(y &gt; d_y)
           <argument>
             <kind>1</kind>
             <string>draw_sprite(sprite_index,0,d_x,d_y);
+
+if(debug_mode)
+{
+    draw_set_color(c_green)
+    draw_rectangle(x-16,y-16,x+16,y+16,true);
+    
+    draw_set_color(c_red)
+    draw_rectangle(cx-16,cy-16,cx+16,cy+16,true);
+}
 </string>
           </argument>
         </arguments>
