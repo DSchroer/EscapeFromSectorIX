@@ -31,6 +31,13 @@
 alphaVar = 1
 image_xscale = 3
 image_yscale = 3
+
+EYE_COL = c_white
+
+if(instance_exists(game_level))
+{
+    EYE_COL = game_level.col
+}
 </string>
           </argument>
         </arguments>
@@ -90,9 +97,9 @@ if(alphaVar&lt;=0)
 
 draw_set_blend_mode(bm_max);
 
-draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle-36,game_level.col,alphaVar);
-draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle,game_level.col,alphaVar);
-draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle+36,game_level.col,alphaVar);
+draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle-36,EYE_COL,alphaVar);
+draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle,EYE_COL,alphaVar);
+draw_sprite_ext(image_index,sprite_index,x,y,image_xscale,image_yscale,image_angle+36,EYE_COL,alphaVar);
 
 draw_set_blend_mode(bm_normal);
 </string>

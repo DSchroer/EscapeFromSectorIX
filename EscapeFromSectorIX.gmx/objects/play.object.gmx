@@ -42,6 +42,9 @@
         
         file_text_close(f);
 
+    }else{
+        instance_create(0,0,game_level);
+        game_level.level = movement_tutorial
     }
 }
 
