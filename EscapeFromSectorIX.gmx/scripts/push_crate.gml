@@ -23,11 +23,13 @@ if(t)
 {
     
     return 1
+}else if(collision_point(x + dx,y + dy,turret,true,true))
+{
+    return 1
 }else{
-    bx = dx * 2
-    by = dy * 2
     
-    if(collision_circle(x + bx,y + by, 16,bouncer,true,true) || collision_circle(x + dx,y + dy, 16,bouncer,true,true))
+    boun = collision_point(x + dx,y + dy,bouncer,true,true)
+    if(boun)
     {
         return 1
     }

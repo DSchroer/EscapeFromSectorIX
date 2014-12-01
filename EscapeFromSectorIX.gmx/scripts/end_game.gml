@@ -20,4 +20,3 @@ t.image_angle = angle
 t.direction = angle + 90
 t.speed = 3
 t.oldS = t.speed
-
