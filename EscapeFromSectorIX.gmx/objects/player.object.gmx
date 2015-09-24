@@ -73,7 +73,7 @@ if(room &gt; game_level.level)
             <string>///Make local variable holder
 
 instance_create(0,0,local_container)
-
+instance_create(0,0,TouchControlPad)
 
 </string>
           </argument>
@@ -105,6 +105,12 @@ if(instance_exists(textPrompt))
 move = false
 if(nx_x == x &amp;&amp; nx_y == y)
 {
+    if(instance_exists(TouchControlPad))
+    {
+       nx_y += TouchControlPad.ydir * 32
+       nx_x += TouchControlPad.xdir * 32
+    }
+    
     if(keyboard_check(vk_up) || keyboard_check(ord("W")))
     {
         nx_y -= 32

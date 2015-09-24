@@ -28,6 +28,9 @@
       <sprite>sprites\btn_play</sprite>
       <sprite>sprites\btn_quit</sprite>
       <sprite>sprites\btn_load</sprite>
+      <sprites name="Touch">
+        <sprite>sprites\btn_dpad</sprite>
+      </sprites>
     </sprites>
     <sprites name="Cinematic">
       <sprite>sprites\end_room</sprite>
@@ -145,6 +148,7 @@
       <object>objects\shadow</object>
     </objects>
     <object>objects\perfect</object>
+    <object>objects\TouchControlPad</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
