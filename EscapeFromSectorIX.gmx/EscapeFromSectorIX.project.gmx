@@ -79,6 +79,7 @@
     <scripts name="CreditScript">
       <script>scripts\credit_next.gml</script>
     </scripts>
+    <script>scripts\range_finder.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_main</font>

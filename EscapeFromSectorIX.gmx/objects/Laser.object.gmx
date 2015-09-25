@@ -101,14 +101,14 @@ ey = y + (cos(direction) * length)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*draw_set_alpha(0.2);
+            <string>draw_set_alpha(0.2);
 scaled_elliot = 0
 for(i=ELLIOT_NUM; i&gt;0;i--){
     scaled_elliot = scale * elliot_val[i];
     draw_line_width_colour(x, y, ex, ey, scaled_elliot, LASER_COLOR, LASER_COLOR);
     draw_circle_colour(ex,ey,scaled_elliot, LASER_COLOR, LASER_COLOR,false);
 }
-draw_set_alpha(0.4);*/
+draw_set_alpha(0.4);
 
 draw_line_width_colour(x, y, ex, ey, scale/10, c_white, c_white);
 draw_circle_colour(ex,ey,scale/3,c_white,c_white,false);
