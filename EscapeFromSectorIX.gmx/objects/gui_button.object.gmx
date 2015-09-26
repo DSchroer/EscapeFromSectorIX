@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>gui_text</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,15 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text = "Escape From Sector IX"
-x2 = 930
-y2 = 150
+            <string>event_inherited()
+nroom = room_next(room)
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="6" enumb="50">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,18 +49,45 @@ y2 = 150
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>mx = device_mouse_x(0)
+my = device_mouse_y(0)
 
+if(mx &gt; hp &amp;&amp; mx &lt; hp + string_width(text))
+{
+    if(my &gt; vp &amp;&amp; my &lt; vp + string_height(text))
+    {
+        room_goto(nroom)
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited()
 
-//draw_set_colour(make_colour_rgb(0,0,0));
-//draw_rectangle(x - 30,y - 10,x2 + 10,y2 + 10,false);
-
-//draw_set_colour(make_colour_rgb(31,31,31));
-//draw_rectangle(x - 20,y,x2,y2,false);
-
-draw_set_font(TitleFont);
-draw_set_colour(make_colour_rgb(153,204,0));
-draw_text(x,y,text);
+if(debug_mode)
+{
+    draw_set_color(c_white)
+    draw_rectangle(hp,vp,hp + string_width(text),vp +string_height(text),true)
+}
 </string>
           </argument>
         </arguments>

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10000000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,15 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text = "Escape From Sector IX"
-x2 = 930
-y2 = 150
+            <string>xpercent = 0
+ypercent = 0
+font = font_main
+halign = fa_left
+valign = fa_top
+text = ""
+tcolor = c_black
+
+//private i guess
+vp = 0
+hp = 0
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,18 +58,15 @@ y2 = 150
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>vp = sc_get_vp(ypercent)
+hp = sc_get_hp(xpercent)
 
+draw_set_font(font)
+draw_set_colour(tcolor)
+draw_set_halign(halign)
+draw_set_valign(valign)
 
-//draw_set_colour(make_colour_rgb(0,0,0));
-//draw_rectangle(x - 30,y - 10,x2 + 10,y2 + 10,false);
-
-//draw_set_colour(make_colour_rgb(31,31,31));
-//draw_rectangle(x - 20,y,x2,y2,false);
-
-draw_set_font(TitleFont);
-draw_set_colour(make_colour_rgb(153,204,0));
-draw_text(x,y,text);
+draw_text(hp,vp,text)
 </string>
           </argument>
         </arguments>

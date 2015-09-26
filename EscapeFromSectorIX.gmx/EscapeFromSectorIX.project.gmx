@@ -80,6 +80,9 @@
       <script>scripts\credit_next.gml</script>
     </scripts>
     <script>scripts\range_finder.gml</script>
+    <scripts name="GUI">
+      <script>scripts\sc_get_vp.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_main</font>
@@ -150,6 +153,11 @@
     </objects>
     <object>objects\perfect</object>
     <object>objects\TouchControlPad</object>
+    <object>objects\resizer</object>
+    <objects name="GUI">
+      <object>objects\gui_text</object>
+      <object>objects\gui_button</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
