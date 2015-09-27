@@ -49,7 +49,9 @@
       <sprite>sprites\spr_laser_box</sprite>
       <sprite>sprites\spr_exit</sprite>
       <sprite>sprites\box</sprite>
+      <sprite>sprites\spr_piston</sprite>
       <sprite>sprites\spr_select</sprite>
+      <sprite>sprites\spr_button</sprite>
     </sprites>
     <sprites name="Deadly">
       <sprite>sprites\spr_turret_fixed</sprite>
@@ -145,6 +147,8 @@
         <object>objects\crate</object>
         <object>objects\door</object>
         <object>objects\push_glass</object>
+        <object>objects\button</object>
+        <object>objects\piston</object>
       </objects>
       <object>objects\pickup</object>
     </objects>
@@ -162,6 +166,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\inventions</room>
     <room>rooms\MainMenu</room>
     <room>rooms\LevelSelect</room>
     <room>rooms\CreditRoom</room>

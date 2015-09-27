@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>
-
-
 dead = false
 walk_v = 0
 nx_x = x
