@@ -25,33 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_enabled = true
-view_visible = 1;
-view_object = player;
-
-
-if(display_get_height() / display_get_width() &lt; 1)
-{
-view_hview = view_wview * (display_get_height() / display_get_width())
-view_hport = view_wport * (display_get_height() / display_get_width());
-}else{
-
-view_wview = view_hview * (display_get_height() / display_get_width())
-view_wport=view_wview;
-}
-
-view_hborder = view_hport/4
-view_vborder = view_wport/4
-
-surface_resize(application_surface,view_wport,view_hport);
-display_set_gui_size(view_wport,view_hport);
-window_set_size(view_wport,view_hport);
+            <string>xpercent = 0
+ypercent = 0
+xxpercent = 0
+yypercent = 0
+color = c_black
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="118">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -68,21 +52,14 @@ window_set_size(view_wport,view_hport);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_enabled = true
-view_visible = 1;
-view_object = player;
+            <string>
+xd = sc_get_hp(xpercent)
+xxd = sc_get_hp(xxpercent)
 
+yd = sc_get_vp(ypercent)
+yyd = sc_get_vp(yypercent)
 
-view_hview = view_wview * (window_get_height() / window_get_width())
-view_hport = view_wport * (window_get_height() / window_get_width());
-
-
-view_hborder = view_hport/4
-view_vborder = view_wport/4
-
-surface_resize(application_surface,view_wport,view_hport);
-display_set_gui_size(view_wport,view_hport);
-window_set_size(view_wport,view_hport);
+draw_rectangle_colour(xd,yd,xxd,yyd,color,color,color,color,false)
 </string>
           </argument>
         </arguments>

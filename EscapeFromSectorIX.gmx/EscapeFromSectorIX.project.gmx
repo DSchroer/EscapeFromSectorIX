@@ -82,6 +82,7 @@
     <script>scripts\range_finder.gml</script>
     <scripts name="GUI">
       <script>scripts\sc_get_vp.gml</script>
+      <script>scripts\ui_create_main.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -157,6 +158,7 @@
     <objects name="GUI">
       <object>objects\gui_text</object>
       <object>objects\gui_button</object>
+      <object>objects\gui_box</object>
     </objects>
   </objects>
   <rooms name="rooms">

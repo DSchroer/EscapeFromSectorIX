@@ -10,6 +10,7 @@ sx = lengthdir_x(range,dir);
 sy = lengthdir_y(range,dir);
 dx = x + sx;
 dy = y + sy;
+
 if (collision_line(x,y,dx,dy,object,prec,notme) > 0){
     while ((abs(sx) >= 1) || (abs(sy) >= 1)) {
         sx /= 2;

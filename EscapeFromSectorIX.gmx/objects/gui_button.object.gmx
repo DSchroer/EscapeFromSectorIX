@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>gui_text</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,12 +27,14 @@
             <kind>1</kind>
             <string>event_inherited()
 nroom = room_next(room)
+dx = 0
+dy = 0
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="50">
+    <event eventtype="6" enumb="56">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,12 +51,15 @@ nroom = room_next(room)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mx = device_mouse_x(0)
-my = device_mouse_y(0)
+            <string>mx = device_mouse_x_to_gui(0);
+my = device_mouse_y_to_gui(0);
 
-if(mx &gt; hp &amp;&amp; mx &lt; hp + string_width(text))
+strw = string_width(text)
+strh = string_height(text)
+
+if(mx &gt; hp &amp;&amp; mx &lt; hp + strw)
 {
-    if(my &gt; vp &amp;&amp; my &lt; vp + string_height(text))
+    if(my &gt; vp &amp;&amp; my &lt; vp + strh)
     {
         room_goto(nroom)
     }
@@ -87,6 +92,7 @@ if(debug_mode)
 {
     draw_set_color(c_white)
     draw_rectangle(hp,vp,hp + string_width(text),vp +string_height(text),true)
+    draw_circle(mx,my,1,true)
 }
 </string>
           </argument>
